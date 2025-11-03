@@ -1,4 +1,3 @@
-
 # Exercice 3 : Booléens et comparaisons
 
 print("3 == 3 == 3 ->", 3 == 3 == 3)
