@@ -1,0 +1,23 @@
+#Challenge 1: Letter Index Dictionary
+mot=input("Entrez un mot : ")
+index_lettres={}
+for i, lettre in enumerate(mot):
+    if lettre in index_lettres:
+        index_lettres[lettre].append(i)
+    else:
+        index_lettres[lettre]=[i]
+print(index_lettres)
+#Challenge 2: Affordable Items  
+items_purchase = {"Water": "$1", "Bread": "$3", "TV": "$1,000", "Fertilizer": "$20"}
+wallet = "$300"
+argent = int(wallet.replace("$", "").replace(",", ""))
+basket = []
+for item, price in items_purchase.items():
+    prix = int(price.replace("$", "").replace(",", ""))
+    if prix <= argent:
+        basket.append(item)
+        argent -= prix
+if basket:
+    print(sorted(basket))
+else:
+    print("Nothing")         
